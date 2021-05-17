@@ -147,10 +147,10 @@ img {
   padding-bottom: 200px;
   text-align: center;
   max-width: 1600px;
-  height: 480px;
+
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid black;
+  /*outline: 1px solid black;*/
   background: #2f303a;
   background-image: linear-gradient(
       to right,
@@ -217,10 +217,9 @@ img {
 .feature-list .item::before {
   display: block;
   content: '';
-  /* padding: 25px 100px;*/
-  margin-bottom: var(--the-most-often-px);
   height: 120px;
-  background-size: contain;
+  margin-bottom: var(--the-most-often-px);
+  background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f5f4fa;
@@ -261,6 +260,9 @@ img {
 }
 .work-list .item:last-child {
   margin-right: 0;
+}
+.team {
+  background: #f5f4fa;
 }
 .team-card {
   padding-top: 30px;
@@ -335,13 +337,13 @@ img {
   margin-right: 0;
 }
 .clients-list .icon-link {
-  display: block;
-  text-align: center;
-  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-color);
-
+  border-radius: 4px;
   fill: var(--icon-color);
 }
 .clients-list .icon-link:hover {
@@ -393,6 +395,8 @@ img {
 .button-list .button:hover {
   background-color: var(--accent-text-color);
   color: var(--title-text-color-secondary);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button-list .button.current {
   background-color: var(--accent-text-color);
@@ -515,7 +519,8 @@ img {
   height: 44px;
 
   fill: var(--title-text-color-secondary);
-  background: #2f303a;
+  background: rgba(255, 255, 255, 0.1);
+
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .footer-list .item {
@@ -528,9 +533,7 @@ img {
   background: var(--icon-accent-color);
 }
 .footer-content {
-  padding-top: 72px;
-  padding-bottom: 100px;
-  margin-left: 156px;
+  margin-left: 70px;
 }
 .card-content {
   padding: 20px 24px 20px 24px;
