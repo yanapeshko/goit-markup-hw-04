@@ -475,6 +475,11 @@ img {
   font-size: 26px;
   line-height: 1.19;
 }
+.footer-page .logo-white:focus,
+.footer-page .logo-white:hover {
+  color: var(--accent-text-color);
+}
+
 .footer-address {
   font-style: normal;
 }
