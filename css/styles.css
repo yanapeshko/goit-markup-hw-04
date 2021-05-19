@@ -449,13 +449,16 @@ img {
   /*outline: 1px solid tomato;*/
 }
 .doing-list > .item {
-  display: block;
   flex-basis: calc(100% / 3 - var(--the-most-often-px));
   margin-left: var(--the-most-often-px);
   margin-top: var(--the-most-often-px);
   /*outline: 1px solid teal;*/
 }
-.doing-list > .item:hover {
+.doing-list .link {
+  display: block;
+}
+.doing-list .link:hover,
+.doing-list .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
