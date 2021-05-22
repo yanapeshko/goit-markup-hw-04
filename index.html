@@ -20,6 +20,7 @@
   <body>
     <!--Студия-->
     <!--контактная информация-->
+
     <header class="header-main">
       <div class="container header">
         <nav class="main-nav">
@@ -61,7 +62,9 @@
       <section class="hero overlay">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="order-button" type="button">Заказать услугу</button>
+          <button class="order-button" data-open-modal type="button">
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!--преимущества студии-->
@@ -99,6 +102,7 @@
           </ul>
         </div>
       </section>
+
       <section class="section who-we-are">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
@@ -393,5 +397,42 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <button class="modal-close" data-close-modal>
+          <svg class="x-close" width="18px" height="18px">
+            <use href="./images/modalclose.svg#icon-modalclose-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
+      }
+    </script>
+    <script>
+      const { height: headerMainHeight } = document
+        .querySelector('.header-main')
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = `${headerMainHeight}px`;
+    </script>
   </body>
 </html>
